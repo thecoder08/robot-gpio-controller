@@ -1,4 +1,4 @@
-var GPIO = require('onoff').GPIO;
+var GPIO = require('onoff').Gpio;
 var backwardleft;
 var backwardright;
 var forwardleft;
