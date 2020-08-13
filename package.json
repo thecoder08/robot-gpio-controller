@@ -1,6 +1,6 @@
 {
   "name": "@thecoder08/robot-gpio-controller",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Control motors connected to the GPIO easier.",
   "main": "main.js",
   "scripts": {
