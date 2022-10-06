@@ -1,43 +1,43 @@
 var GPIO = require('onoff').Gpio;
-var backwardleft;
-var backwardright;
-var forwardleft;
-var forwardright;
+var left1;
+var right1;
+var left2;
+var right2;
 module.exports = {
-  setGPIO: function(bl, br, fl, fr) {
-    backwardleft = new GPIO(bl, 'out');
-    backwardright = new GPIO(br, 'out');
-    forwardleft = new GPIO(fl, 'out');
-    forwardright = new GPIO(fr, 'out');
+  setGPIO: function(l1, r1, l2, r2) {
+    left1 = new GPIO(l1, 'out');
+    right1 = new GPIO(r1, 'out');
+    left2 = new GPIO(l2, 'out');
+    right2 = new GPIO(r2, 'out');
   },
   forward: function() {
-    backwardleft.writeSync(0);
-    backwardright.writeSync(0);
-    forwardleft.writeSync(1);
-    forwardright.writeSync(1);
+    left1.writeSync(1);
+    left2.writeSync(0);
+    right1.writeSync(1);
+    right2.writeSync(0);
   },
   backward: function() {
-    backwardleft.writeSync(1);
-    backwardright.writeSync(1);
-    forwardleft.writeSync(0);
-    forwardright.writeSync(0);
+    left1.writeSync(0);
+    left2.writeSync(1);
+    right1.writeSync(0);
+    right2.writeSync(1);
   },
   left: function() {
-    backwardleft.writeSync(1);
-    backwardright.writeSync(0);
-    forwardleft.writeSync(0);
-    forwardright.writeSync(1);
+    left1.writeSync(0);
+    left2.writeSync(1);
+    right1.writeSync(1);
+    right2.writeSync(0);
   },
   right: function() {
-    backwardleft.writeSync(0);
-    backwardright.writeSync(1);
-    forwardleft.writeSync(1);
-    forwardright.writeSync(0);
+    left1.writeSync(1);
+    left2.writeSync(0);
+    right1.writeSync(0);
+    right2.writeSync(1);
   },
   stop: function() {
-    backwardleft.writeSync(0);
-    backwardright.writeSync(0);
-    forwardleft.writeSync(0);
-    forwardright.writeSync(0);
+    left1.writeSync(0);
+    left2.writeSync(0);
+    right1.writeSync(0);
+    right2.writeSync(0);
   }
 }
