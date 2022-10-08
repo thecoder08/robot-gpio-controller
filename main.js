@@ -22,13 +22,13 @@ module.exports = {
     right1.writeSync(0);
     right2.writeSync(1);
   },
-  left: function() {
+  right: function() {
     left1.writeSync(0);
     left2.writeSync(1);
     right1.writeSync(1);
     right2.writeSync(0);
   },
-  right: function() {
+  left: function() {
     left1.writeSync(1);
     left2.writeSync(0);
     right1.writeSync(0);
