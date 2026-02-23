@@ -1,2 +1,2 @@
 # robot-gpio-controller
-Library to control the motors for a robot I build with a Raspberry Pi.
+Library to control the motors for a robot I built with a Raspberry Pi.
